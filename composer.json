@@ -1,5 +1,5 @@
 {
-    "name": "bobby/simple-code-reflection",
+    "name": "bobby/simple-codes-reflection",
     "description": "用于反射你自己代码内容(编写DEBUG)",
     "type": "library",
     "license": "MIT",
@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Bobby\\SimpleReflectionCode\\": "src/"
+            "Bobby\\SimpleCodesReflection\\": "src/"
         }
     }
 }

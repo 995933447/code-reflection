@@ -1,5 +1,5 @@
 <?php
-require "../src/SimpleReflectionCode.php";
+require "../src/SimpleCodesReflection.php";
 
 class Unity
 {
@@ -14,9 +14,9 @@ class Unity
     }
 }
 
-echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(Unity::class);
-echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(new Unity());
-echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(new ReflectionMethod(Unity::class, "success"));
-echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle([Unity::class, "success"]);
+echo \Bobby\SimpleCodesReflection\SimpleCodesReflection::handle(Unity::class);
+echo \Bobby\SimpleCodesReflection\SimpleCodesReflection::handle(new Unity());
+echo \Bobby\SimpleCodesReflection\SimpleCodesReflection::handle(new ReflectionMethod(Unity::class, "success"));
+echo \Bobby\SimpleCodesReflection\SimpleCodesReflection::handle([Unity::class, "success"]);
 
-echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle([Unity::class, "fail"], 1, 2);
+echo \Bobby\SimpleCodesReflection\SimpleCodesReflection::handle([Unity::class, "fail"], 1, 2);
