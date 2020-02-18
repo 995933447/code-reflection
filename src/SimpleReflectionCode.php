@@ -6,7 +6,11 @@ class SimpleReflectionCode
 	public static function handle($reflector, $startLine = null, $endLine = null) : string
 	{
 	    if (!$reflector instanceof \Reflector) {
-            $reflector = new \ReflectionClass($reflector);
+	        if (is_array($reflector)) {
+	            $reflector = new \ReflectionMethod($reflector[0], $reflector[1]);
+            } else {
+                $reflector = new \ReflectionClass($reflector);
+            }
         }
 		$path = $reflector->getFileName();
 		$lines = file($path);

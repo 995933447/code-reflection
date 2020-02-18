@@ -14,14 +14,26 @@ echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(new ReflectionMeth
 /**
 class Unity
 {
-        public function success()
+        public static function success()
         {
                 return 'ok';
         }
 }
-        public function success()
+class Unity
+{
+        public static function success()
         {
                 return 'ok';
         }
+}
+        public static function success()
+        {
+                return 'ok';
+        }
+        public static function success()
+        {
+                return 'ok';
+        }
+
 **/
 ````
