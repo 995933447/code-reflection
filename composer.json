@@ -1,0 +1,19 @@
+{
+    "name": "bobby/simple-code-reflection",
+    "description": "用于反射你自己代码内容(编写DEBUG)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bobby",
+            "email": "9955933447@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "\"
+        }
+    }
+}
