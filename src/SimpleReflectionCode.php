@@ -3,7 +3,7 @@ namespace Bobby\SimpleReflectionCode;
 
 class SimpleReflectionCode
 {
-	public static function handle($reflector, $startLine = null, $endLine = null) : string
+	public static function handle($reflector, $from = null, $end = null) : string
 	{
 	    if (!$reflector instanceof \Reflector) {
 	        if (is_array($reflector)) {
@@ -12,10 +12,16 @@ class SimpleReflectionCode
                 $reflector = new \ReflectionClass($reflector);
             }
         }
-		$path = $reflector->getFileName();
+
+	    $path = $reflector->getFileName();
 		$lines = file($path);
-		$from = $reflector->getStartLine();
-		$end = $reflector->getEndLine();
-		return implode(array_slice($lines, $startLine?: $from - 1, $endLine?: $end - $from + 1));
+		if (!$from) {
+            $from = $reflector->getStartLine();
+        }
+		if (!$end) {
+            $end = $reflector->getEndLine();
+        }
+
+		return implode(array_slice($lines, $from - 1, $end - $from + 1));
 	}
 }
