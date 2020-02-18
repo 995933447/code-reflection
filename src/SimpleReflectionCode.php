@@ -1,7 +1,7 @@
 <?php 
-namespace Bobby\SimpleReflectionCode;
+namespace Bobby\SimpleCodesReflection;
 
-class SimpleReflectionCode
+class SimpleCodesReflection
 {
 	public static function handle($reflector, int $startLine = null, int $endLine = null) : string
 	{
