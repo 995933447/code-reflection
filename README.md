@@ -1,10 +1,15 @@
 ````php
 class Unity
 {
- 	public function success()
+ 	public static function success()
  	{
  		return 'ok';
  	}
+
+ 	public static function fail()
+    {
+        return 'error';
+    }
 }
 
 echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(Unity::class);
@@ -12,7 +17,8 @@ echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(new Unity());
 echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle(new ReflectionMethod(Unity::class, "success"));
 echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle([Unity::class, "success"]);
 
-echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle([Unity::class, "success"], 1, 2);
+echo \Bobby\SimpleReflectionCode\SimpleReflectionCode::handle([Unity::class, "fail"], 1, 2);
+
 // output
 /**
 class Unity
@@ -21,6 +27,11 @@ class Unity
         {
                 return 'ok';
         }
+
+        public static function fail()
+    {
+        return 'error';
+    }
 }
 class Unity
 {
@@ -28,6 +39,11 @@ class Unity
         {
                 return 'ok';
         }
+
+        public static function fail()
+    {
+        return 'error';
+    }
 }
         public static function success()
         {
@@ -37,8 +53,8 @@ class Unity
         {
                 return 'ok';
         }
-<?php
-require "../src/SimpleReflectionCode.php";
 
+        public static function fail()
+    {
 **/
 ````
